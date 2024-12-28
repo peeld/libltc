@@ -183,7 +183,7 @@ void ltc_frame_to_time(SMPTETimecode *stime, LTCFrame *frame, int flags) {
 	stime->frame = frame->frame_units + frame->frame_tens*10;
 }
 
-void ltc_time_to_frame(LTCFrame* frame, SMPTETimecode* stime, enum LTC_TV_STANDARD standard, int flags) {
+LTC_API void ltc_time_to_frame(LTCFrame* frame, SMPTETimecode* stime, enum LTC_TV_STANDARD standard, int flags) {
 	if (flags & LTC_USE_DATE) {
 		smpte_set_timezone_code(stime, frame);
 		frame->user6 = stime->years/10;
