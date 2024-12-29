@@ -26,7 +26,7 @@ install(TARGETS ltc
 )
 
 # Install header files
-install(FILES ${HEADERS} ${PROJECT_BINARY_DIR}/ltclib_export.h
+install(FILES ${HEADERS} ${PROJECT_BINARY_DIR}/ltc_export.h
     DESTINATION include
 )
 
